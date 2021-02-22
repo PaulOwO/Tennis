@@ -6,8 +6,10 @@ public class Ball : MonoBehaviour
 {
     public float speed = 3f;
     public Rigidbody2D rb;
+    Vector3 startPosition;
     void Start()
     {
+        startPosition = transform.position;
         initializeBallVelocity();
     }
 
@@ -21,6 +23,22 @@ public class Ball : MonoBehaviour
    
     void Update()
     {
-        
+        Vector3 viewPos = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
+        bool isVisible = true;
+        if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0)
+        {
+            isVisible = true;
+        }
+        else
+        {
+            isVisible = false;
+        }
+
+        if (!isVisible)
+        {
+            Debug.Log("you have lost");
+            transform.position = startPosition;
+            initializeBallVelocity();
+        }
     }
 }
