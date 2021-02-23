@@ -40,6 +40,7 @@ public class Ball : MonoBehaviour
             Debug.Log("you have lost");
             transform.position = startPosition;
             initializeBallVelocity();
+            //timerGoing = false;
         }
     }
 

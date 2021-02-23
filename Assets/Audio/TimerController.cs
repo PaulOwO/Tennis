@@ -11,7 +11,7 @@ public class TimerController : MonoBehaviour
     public Text timeCounter;  //serialze
 
     private TimeSpan timePlaying;
-    private bool timerGoing;
+    public bool timerGoing;
     private float elapsedTime;
 
     private void Awake()
