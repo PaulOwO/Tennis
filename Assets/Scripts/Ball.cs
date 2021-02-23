@@ -35,20 +35,12 @@ public class Ball : MonoBehaviour
         {
             y = 1;
         }
-<<<<<<< HEAD
         rb.velocity = new Vector2(x * speed, y * speed);
-=======
->>>>>>> 4481341bafa18a34f934978ae615186262ef7677
     }
 
 
     void Update()
     {
-<<<<<<< HEAD
-       
-=======
-        
->>>>>>> 4481341bafa18a34f934978ae615186262ef7677
         Vector3 viewPos = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
         bool isVisible = true;
         if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0)
@@ -74,11 +66,7 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-<<<<<<< HEAD
             rb.velocity = rb.velocity * 1.1f;
-=======
-            
->>>>>>> 4481341bafa18a34f934978ae615186262ef7677
             audioSource.Play();
         }
     }
