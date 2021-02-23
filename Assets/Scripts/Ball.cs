@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     public float speed = 3f;
     public Rigidbody2D rb;
     Vector3 startPosition;
@@ -17,10 +18,10 @@ public class Ball : MonoBehaviour
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        rb.velocity = new Vector2(x*speed, y*speed);
+        rb.velocity = new Vector2(x * speed, y * speed);
     }
 
-   
+
     void Update()
     {
         Vector3 viewPos = UnityEngine.Camera.main.WorldToViewportPoint(transform.position);
@@ -39,6 +40,15 @@ public class Ball : MonoBehaviour
             Debug.Log("you have lost");
             transform.position = startPosition;
             initializeBallVelocity();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            speed = speed + 1;
+            audioSource.Play();
         }
     }
 }
