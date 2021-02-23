@@ -12,7 +12,7 @@ public class EndScene : MonoBehaviour
     void Update()
     {
         //string timePlayingStr = timePlaying.ToString("You survived'mm':'ss'.'ff");
-        // timeCounter.text = timePlayingStr;
+        //timeCounter.text = timePlayingStr;
 
 
         if (Input.GetKey(KeyCode.C))

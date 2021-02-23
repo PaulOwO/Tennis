@@ -314,6 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813003504}
   - component: {fileID: 1813003506}
+  - component: {fileID: 1813003507}
   - component: {fileID: 1813003505}
   m_Layer: 5
   m_Name: You survived
@@ -383,6 +384,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813003503}
   m_CullTransparentMesh: 0
+--- !u!114 &1813003507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813003503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6efd972af7d974445b001cfb6bdeb623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndCounter: {fileID: 1813003505}
 --- !u!1 &2049258731
 GameObject:
   m_ObjectHideFlags: 0

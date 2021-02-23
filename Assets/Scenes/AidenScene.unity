@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.0129582975, g: 0.9811321, b: 0.1681822, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeCounter: {fileID: 415706955}
   timerGoing: 0
+  elapsedTime: 0
 --- !u!222 &415706957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1376,6 +1377,10 @@ PrefabInstance:
       value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 7446685143182807453, guid: 3acec350ed2e6ec449e0914bc11b5df8, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446685143182807453, guid: 3acec350ed2e6ec449e0914bc11b5df8, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 497019157}
@@ -1385,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 7aa63a86c1bb8954a9c4aade510bee2d, type: 2}
     - target: {fileID: 7446685143182807455, guid: 3acec350ed2e6ec449e0914bc11b5df8, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acec350ed2e6ec449e0914bc11b5df8, type: 3}
